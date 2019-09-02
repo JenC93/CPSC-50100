@@ -1,0 +1,61 @@
+package first;
+
+import java.util.Arrays;
+
+public class AssignmentOne {
+
+	public static void main(String[] args)
+	{	
+// This program will find the weighted average of six test
+//scores, and the weighted average of six assignment scores. 
+//then the program will find the master average between 
+//the two weighted averages.
+
+	//Create an array of the values
+	
+String result = "";
+int [] test_scores = {75,95,85,55,65,70};
+double [] weighted_test = {0.10, 0.20, 0.25, 0.25, 0.10, 0.10};
+int [] assignment_scores = {55,65,65,60,55,50};
+double [] assignment_weight = {0.05,0.10,0.15,0.25,0.25,0.2};
+
+{
+System.out.print("\nTest Scores: "+Arrays.toString(test_scores));
+System.out.println("\nTest Weights: "+Arrays.toString(weighted_test));
+System.out.print("\nAssignment Scores: "+Arrays.toString(assignment_scores));
+System.out.println("\nAssignment Weight: "+Arrays.toString(assignment_weight));
+
+for (int i = 0; i < test_scores.length; i++)
+{
+	int num1 = test_scores[i];
+	double num2 = weighted_test[i];
+	
+	// This will calculate the product of the string array.
+			result += Double.toString(num1 * num2) + " "; 
+}
+for (int a = 0; a < assignment_scores.length; a++)
+{
+	int num3 = assignment_scores[a];
+	double num4 = assignment_weight[a];
+	
+	//This will calculate the product of the string array.
+			result += Double.toString(num3 * num4) + " ";
+			
+}
+		// Print the result.
+		System.out.println("\nIndividual Test Weighted: "+result);
+		
+	double weighted_test_average = 	(7.5+19.0+21.25+13.75+6.5+7.0);
+	System.out.println("\nWeighted Test Average: " + weighted_test_average);
+	
+	double weighted_assignment_average = (2.75+6.5+9.75+15+13.75+10);
+	System.out.println("\nWeighted Assignment Average: " + weighted_assignment_average);
+	
+	double master_average = ((57.75 + 75.0) / 2);
+	System.out.println("The weighted average between the test scores and assignment scores is: " + master_average);
+			
+	
+
+}
+}
+}
